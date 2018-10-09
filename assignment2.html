@@ -1,0 +1,88 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+<head>
+  
+    <style>
+        body {
+            background-color: orange;
+			margin: 1cm;
+			border: 2px solid blue;
+			padding: 1cm;
+			border-radius: 20px;
+        }
+        input {
+            text-transform: uppercase;
+        }
+        table {
+            width: 60%;
+        }
+    </style>
+    <script>
+        function validateForm() {
+            var name = document.forms['register']['name'].value;
+            var age = document.forms['register']['age'].value;
+            var email = document.forms['register']['email'].value;
+            if(!name.match(/^[A-Za-z]+$/)) {
+				alert("Name must contain CHARACTERS ONLY");
+			}
+            if(parseInt(age) < 18) {
+                alert("Age must be EQUAL TO OR GREATER THAN 18");
+            }
+            if(!email.match(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/)) {
+                alert("Email ID is an INVALID EMAIL ID");
+            }
+        }
+    </script>
+</head>
+<body>
+
+ <div id="container" style="white-space:nowrap">
+
+    <div id="image" style="display:inline;">
+<img src="data:image/png;base64,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" alt="X">    </div>
+
+    <div id="texts" style="display:inline; white-space:nowrap;">
+    <font size="20" style="font-family:Comic Sans MS"> ena Events</font>
+
+ </div>
+
+</div>?     
+
+
+
+    <div>
+        <form name="register" onsubmit="validateForm()" >
+            <table>
+                <tr>
+                    <td>Name:</td>
+                    <td><input type="text" name="name" autocomplete="off"></td>
+                </tr>
+                <tr>
+                    <td>Age:</td>
+                    <td><input type="text" name="age" autocomplete="off" required></td>
+                </tr>
+                <tr>
+                    <td>Email ID:</td>
+                    <td><input type="text" name="email" autocomplete="off"></td>
+                </tr>
+                <tr>
+                    <td>City:</td>
+                    <td>
+                        <input list="venue" id="hotballoonriding" name="hotballoonriding" />
+                        <datalist id="venue">
+                            <option value="Rajkot">
+                            <option value="Vizag">
+                            <option value="Bangalore">
+                        </datalist>
+                    </td>
+                </tr>
+                <tr style="height: 12pt;"></tr>
+                <tr>
+                    <td></td>
+                    <td><input type="submit" name="submit" value="Submit"></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>

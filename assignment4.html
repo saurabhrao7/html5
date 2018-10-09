@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>T20 Match</title>
+</head>
+<body>
+<h1>Board of Control for Cricket in India</h1>
+<h3>T20 Batting Statistics</h3>
+<canvas id="myCanvas" width="500" height="400" style="border:1px solid red;">
+No support for HTML5 canvas tag</canvas>
+
+<script>
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+ctx.font = "15px calibri";
+ctx.lineWidth = 1.5; //axis line width
+ctx.strokeText(" ^ Runs",32,20);
+
+//y axis spacing
+ctx.strokeText("150--",0,50);
+ctx.strokeText("120--",0,130);
+ctx.strokeText(" 60 --",0,210);
+ctx.strokeText(" 30 --",0,290);
+ctx.strokeText("0",20,385);
+
+ctx.moveTo(30,400);
+ctx.lineTo(30,0);
+ctx.moveTo(0,370);
+ctx.lineTo(500,370);
+ctx.stroke();
+
+//x axis spacing
+ctx.strokeText("|",130,380);
+ctx.strokeText("5",127,397);
+ctx.strokeText("|",230,380);
+ctx.strokeText("10",227,397);
+ctx.strokeText("|",330,380);
+ctx.strokeText("15",327,397);
+ctx.strokeText("|",430,380);
+ctx.strokeText("20",427,397);
+ctx.strokeText("Over >",445,360);
+
+//plot point
+ctx.moveTo(130, 258); //(5,40)
+ctx.lineTo(230, 185); //(10,75)
+ctx.moveTo(230, 185);
+ctx.lineTo(330, 77); //(15,140)
+
+ctx.stroke();
+</script>
+</body>
+</html>
