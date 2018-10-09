@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table, th, td {
+    border: 1px solid black;
+}
+</style>
+</head>
+<body>
+  
+<table>
+  <tr>
+    <th>TICKER</th>
+    <th>PRICE</th> 
+  </tr>
+  <tr>
+    <td>WIPRO</td>
+    <td>298.45</td>
+  </tr>
+  <tr>
+    <td>INFY</td>
+    <td>949.95</td>
+  </tr>
+  <tr>
+    <td>TCS</td>
+    <td>2313.70</td>
+  </tr>
+    <tr>
+    <td>TECHM</td>
+    <td>485.85</td>
+  </tr>
+  </table>
+
+<canvas id="myCanvas" width="230" height="75" ">No support
+</canvas>
+
+<script>
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+ctx.font = "bold 35px Times New Roman";
+ctx.fillText("Stock Trading", 3, 50);
+</script>
+
+<FORM>
+<TABLE BORDER="1">
+  <TR>
+    <TD>Ticker:</TD>
+    <TD>
+<input list="ticker" required>
+<datalist id="ticker">
+  <option value="WIPRO">
+  <option value="INFY">
+  <option value="TCS">
+  <option value="TECHM">
+</datalist>    </TD>
+  </TR>
+  <TR>
+    <TD>Quantity:</TD>
+    <TD><INPUT TYPE="number" NAME="quantity" SIZE="15" min="10" max="100" step="10" required></TD>
+  </TR>
+</TABLE>
+<P><INPUT TYPE="SUBMIT" VALUE="Submit" NAME="submit"></P>
+</FORM>
+
+</body>
+</html>
